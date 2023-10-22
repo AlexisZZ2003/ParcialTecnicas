@@ -3,7 +3,7 @@ package org.example.ejercicios;
 import java.util.List;
 
 public class Facturacion {
-	record Factura(String cliente, String fecha, List<Double> precioProductos) {
+	record Factura(String cliente, String fecha, List<Double> preciosProductos) {
 	}
 
 	public static void main(String[] args) {
@@ -18,7 +18,7 @@ public class Facturacion {
 	}
 
 	private static double calcularTotal(Factura factura) {
-            double total = factura.precioProductos().stream().mapToDouble(Double::doubleValue).sum();
+            double total = factura.preciosProductos().stream().mapToDouble(Double::doubleValue).sum();
             return total;		
 	}
 
